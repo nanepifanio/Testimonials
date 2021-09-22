@@ -1,218 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
-
 /********* Global Style ***********/
 
-body, p, h1, ul, li, blockquote {
-    padding: 0;
-    margin: 0;
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: #ecf2f8;
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    line-height: 1.4;
+  background-color: #ecf2f8;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  line-height: 1.4;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    max-width: 48px;
-    display: block;
+  max-width: 48px;
+  display: block;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /********* Structure ***********/
 
 #structure {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1fr, auto));
-    grid-template-areas: 
-        "daniel    daniel   daniel   jonathan  kira"
-        "jeanette  patrick  patrick  patrick   kira"
-        "footer    footer   footer   footer    footer"
-    ;
-    gap: 40px;
-    padding: 50px calc((100% - 1440px) / 2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, auto));
+  grid-template-areas:
+    "daniel    daniel   daniel   jonathan  kira"
+    "jeanette  patrick  patrick  patrick   kira"
+    "footer    footer   footer   footer    footer";
+  gap: 40px;
+  padding: 50px calc((100% - 1440px) / 2);
 }
 
 /********* Class ***********/
 
 .quote {
-    padding: 40px;
-    border-radius: 8px;
+  padding: 40px;
+  border-radius: 8px;
 }
 
 .quote h1 {
-    color: #ffffff;
-    margin: 20px 0;
+  color: #ffffff;
+  margin: 20px 0;
 }
 
 .quote blockquote {
-    color: #ffffffb2;
+  color: #ffffffb2;
 }
 
 .picture-name {
-    display: flex;
-    align-items: center;
-    
+  display: flex;
+  align-items: center;
 }
 
 .picture img {
-    border-radius: 50%;
-    border: 3px solid #ffffff;
-    margin-right: 25px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  margin-right: 25px;
 }
 
 .name li:first-child {
-    font-size: 1.25rem;
-    color: #ffffff;
+  font-size: 1.25rem;
+  color: #ffffff;
 }
 
 .name li:nth-child(2) {
-    font-size: 1rem;
-    color: #ffffffb4;
+  font-size: 1rem;
+  color: #ffffffb4;
 }
 
 .bg-white li:first-child {
-    color: #48556a;
+  color: #48556a;
 }
 
 .bg-white li:nth-child(2) {
-    color: #38363693;
+  color: #38363693;
 }
 
 /********* Id ***********/
 
 #daniel {
-    grid-area: daniel;
-    grid-column: span 3;
-    margin-left: 20px;
-    background-color: #7541c8;
-    position: relative;
-    z-index: 2;
+  grid-area: daniel;
+  grid-column: span 3;
+  margin-left: 20px;
+  background-color: #7541c8;
+  position: relative;
+  z-index: 2;
 }
 
-#quotation img{
-    max-width: 100%;
-    min-height: 150px;
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    z-index: -1;
-    margin-right: 80px;
+#quotation img {
+  max-width: 100%;
+  min-height: 150px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  z-index: -1;
+  margin-right: 80px;
 }
 
 #jonathan {
-    background-color: #48556a;
-    grid-area: jonathan;
+  background-color: #48556a;
+  grid-area: jonathan;
 }
 
 #kira {
-    grid-row: 1 / -1;
-    background-color: #ffffff;
+  grid-row: 1 / -1;
+  background-color: #ffffff;
 }
 
-#kira h1, #jeanette h1 {
-    color: #48556a;
+#kira h1,
+#jeanette h1 {
+  color: #48556a;
 }
 
-#kira blockquote, #jeanette blockquote {
-    color: #3836368c;
+#kira blockquote,
+#jeanette blockquote {
+  color: #3836368c;
 }
 
 #kira {
-    padding-right: 10px;
-    margin-right: 20px;
-    grid-area: kira;
+  padding-right: 10px;
+  margin-right: 20px;
+  grid-area: kira;
 }
 
-#kira blockquote{
-   max-width: 240px;
+#kira blockquote {
+  max-width: 240px;
 }
 
 #jeanette {
-    margin-left: 20px;
-    background-color: #ffffff;
-    grid-area: jeanette;
+  margin-left: 20px;
+  background-color: #ffffff;
+  grid-area: jeanette;
 }
 
 #patrick {
-    grid-column: span 3;
-    background-color: #19212e;
-    grid-area: patrick;
+  grid-column: span 3;
+  background-color: #19212e;
+  grid-area: patrick;
 }
 
 #patrick .picture img {
-    border: 3px solid #7541c8;
+  border: 3px solid #7541c8;
 }
 
 #daniel .picture img {
-    border: 3px solid #9f69f7;
+  border: 3px solid #9f69f7;
 }
 
 #footer {
-    grid-area: footer;
-    text-align: center;
-    margin: 0 20px;
+  grid-area: footer;
+  text-align: center;
+  margin: 0 20px;
 }
 
 #footer a {
-    color: #7541c8;
+  color: #7541c8;
 }
 
 @media (max-width: 1024px) {
-    #structure {
-        grid-template-areas: 
-            "daniel   daniel   daniel   jonathan  jonathan"
-            "jeanette jeanette patrick  patrick   patrick"
-            "kira     kira     kira     kira      kira"
-            "footer   footer   footer   footer    footer"
-        ;
-        padding: 50px 0;
-    }
+  #structure {
+    grid-template-areas:
+      "daniel   daniel   daniel   jonathan  jonathan"
+      "jeanette jeanette patrick  patrick   patrick"
+      "kira     kira     kira     kira      kira"
+      "footer   footer   footer   footer    footer";
+    padding: 50px 0;
+  }
 
-    #kira {
-        grid-column: 1 / -1;
-        padding-right: 40px;
-        margin-left: 20px;
-    }
+  #kira {
+    grid-column: 1 / -1;
+    padding-right: 40px;
+    margin-left: 20px;
+  }
 
-    #kira blockquote{
-        max-width: 100%;
-     }
+  #kira blockquote {
+    max-width: 100%;
+  }
 
-     #patrick, #jonathan {
-         margin-right: 20px;
-     }
+  #patrick,
+  #jonathan {
+    margin-right: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-    #structure {
-        grid-template-areas:  
-            "daniel   daniel   daniel"
-            "jonathan jonathan jonathan"
-            "jeanette jeanette jeanette"
-            "patrick  patrick  patrick"
-            "kira     kira     kira"
-            "footer   footer   footer"
-        ;
-    }
+  #structure {
+    grid-template-areas:
+      "daniel   daniel   daniel"
+      "jonathan jonathan jonathan"
+      "jeanette jeanette jeanette"
+      "patrick  patrick  patrick"
+      "kira     kira     kira"
+      "footer   footer   footer";
+  }
 
-    #daniel, #jeanette {
-        margin-right: 20px;
-    }
+  #daniel,
+  #jeanette {
+    margin-right: 20px;
+  }
 
-    #jonathan, #patrick {
-        margin-left: 20px;
-    }
+  #jonathan,
+  #patrick {
+    margin-left: 20px;
+  }
 
-    #quotation img {
-        max-width: 60%;
-        margin-right: 20px;
-    }
+  #quotation img {
+    max-width: 60%;
+    margin-right: 20px;
+  }
 }
